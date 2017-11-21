@@ -14,11 +14,13 @@ public class Client extends AsyncTask<Void, Void, Void> {
 	int dstPort;
 	String response = "";
 	TextView textResponse;
+	MainActivity activity;
 
-	Client(String addr, int port,TextView textResponse) {
+	Client(String addr, int port,TextView textResponse,MainActivity activity) {
 		dstAddress = addr;
 		dstPort = port;
 		this.textResponse=textResponse;
+		this.activity=activity;
 	}
 
 	@Override
@@ -44,6 +46,17 @@ public class Client extends AsyncTask<Void, Void, Void> {
 				response += byteArrayOutputStream.toString("UTF-8");
 			}
 
+
+//			activity.runOnUiThread(new Runnable() {
+//
+//				@Override
+//				public void run() {
+//					if(response=="OK"){
+//					activity.disconnect();
+//					}
+//				}
+//			});
+
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -61,6 +74,7 @@ public class Client extends AsyncTask<Void, Void, Void> {
 					e.printStackTrace();
 				}
 			}
+			activity.disconnect();
 		}
 		return null;
 	}
@@ -69,6 +83,7 @@ public class Client extends AsyncTask<Void, Void, Void> {
 	protected void onPostExecute(Void result) {
 		textResponse.setText(response);
 		super.onPostExecute(result);
+
 	}
 
 }

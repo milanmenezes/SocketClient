@@ -14,17 +14,17 @@
         android:text="http://androidSRC.net/"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/addressEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Server ip address" />
+    <!--<EditText-->
+        <!--android:id="@+id/addressEditText"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Server ip address" />-->
 
-    <EditText
-        android:id="@+id/portEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Server port number" />
+    <!--<EditText-->
+        <!--android:id="@+id/portEditText"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Server port number" />-->
 
     <Button
         android:id="@+id/connectButton"
