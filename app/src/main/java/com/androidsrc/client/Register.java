@@ -61,7 +61,8 @@ public class Register extends Activity {
                                     editor.putString("usn", usn.getText().toString());
                                     editor.putString("STATE", "NEXT");
                                     editor.commit();
-                                    Intent inent = new Intent(getApplicationContext(), Courses.class);
+                                    Intent inent = new Intent(getApplicationContext(), Fingerprint.class);  //Courses
+                                    inent.putExtra("source","course");
                                     startActivity(inent);
 
                                 }

@@ -1,6 +1,7 @@
 package com.androidsrc.client;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiConfiguration;
@@ -25,6 +26,7 @@ public class MainActivity extends Activity {
 	int status=0;
 
 
+	
 
 
 	@Override
@@ -45,6 +47,9 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
+
+
+
 				final String ssid="Oneplus3";
 				String key="1234567a";
 				WifiConfiguration wifiConfig = new WifiConfiguration();
@@ -158,4 +163,11 @@ public class MainActivity extends Activity {
 		wifiManager.setWifiEnabled(false);
 	}
 
+	public void onBackPressed(){
+		Intent a = new Intent(Intent.ACTION_MAIN);
+		a.addCategory(Intent.CATEGORY_HOME);
+		a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		startActivity(a);
+
+	}
 }

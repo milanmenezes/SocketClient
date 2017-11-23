@@ -69,8 +69,9 @@ public class Courses extends Activity {
                                 button.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View arg0) {
-                                        Intent inent = new Intent(getApplicationContext(), MainActivity.class);
+                                        Intent inent = new Intent(getApplicationContext(), Fingerprint.class);
                                         inent.putExtra("courses",cid);
+                                        inent.putExtra("source","mainactivity");
                                         startActivity(inent);
 
                                     }
