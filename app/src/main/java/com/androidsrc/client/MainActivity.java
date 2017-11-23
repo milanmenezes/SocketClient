@@ -26,7 +26,6 @@ public class MainActivity extends Activity {
 	int status=0;
 
 
-	
 
 
 	@Override
@@ -47,9 +46,6 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
-
-
-
 				final String ssid="Oneplus3";
 				String key="1234567a";
 				WifiConfiguration wifiConfig = new WifiConfiguration();

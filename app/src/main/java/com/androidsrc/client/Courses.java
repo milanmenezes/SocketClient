@@ -37,12 +37,23 @@ public class Courses extends Activity {
         setContentView(R.layout.activity_courses);
         RequestQueue queue = Volley.newRequestQueue(this);
         final ViewGroup.LayoutParams lparams = new ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         final LinearLayout llayout = (LinearLayout) findViewById(R.id.lview);
         SharedPreferences sharedpreferences;
         sharedpreferences = getSharedPreferences("login", Context.MODE_PRIVATE);
         String tid=sharedpreferences.getString("id",null);
         String url="http://app.automated-attendance.tk/courses/";
+
+        Button webviewbutton = (Button) findViewById(R.id.webviewbutton);
+
+        webviewbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent inent = new Intent(getApplicationContext(), StudentWebView.class);
+                startActivity(inent);
+            }
+        });
+
 
 
         // Request a string response from the provided URL.
@@ -66,6 +77,7 @@ public class Courses extends Activity {
                                 button.setLayoutParams(lparams);
                                 button.setText(row.getString("cname"));
                                 button.setId(i);
+
                                 button.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View arg0) {

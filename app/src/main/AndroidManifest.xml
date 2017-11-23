@@ -15,10 +15,11 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission
-        android:name="android.permission.USE_FINGERPRINT" />
-    <uses-feature android:name="android.hardware.fingerprint"
-        android:required="true"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <uses-feature
+        android:name="android.hardware.fingerprint"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -36,7 +37,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Courses" />
-        <activity android:name=".Fingerprint"></activity>
+        <activity android:name=".Fingerprint" />
+        <activity android:name=".StudentWebView"></activity>
     </application>
 
 </manifest>
