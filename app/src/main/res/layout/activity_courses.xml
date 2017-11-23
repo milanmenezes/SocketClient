@@ -23,11 +23,15 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/webviewbutton"
+            style="@android:style/Widget.Holo.Button.Toggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/webviewbutton"
+            android:layout_marginBottom="10dp"
             android:text="Show Attendance"
-            android:layout_marginBottom="10dp"/>
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
 
 
